@@ -24,5 +24,10 @@ describe Gst::Element do
       result = fakesrc.link_many [queue, fakesink]
       result.must_equal false
     end
+
+    it 'returns true when linking 0 elements' do
+      result = fakesrc.link_many []
+      result.must_equal true
+    end
   end
 end
