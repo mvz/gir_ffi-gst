@@ -3,9 +3,7 @@ module Gst
 
   class Element
     def link_many elements
-      return true if elements.empty?
-      first, *rest = elements
-      link(first) && first.link_many(rest)
+      [self, *elements].each_cons(2).all? { |src, sink| src.link(sink) }
     end
   end
 end
