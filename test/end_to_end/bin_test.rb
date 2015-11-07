@@ -3,11 +3,14 @@ require_relative '../test_helper'
 describe Gst::Bin do
   it 'allows easy adding, linking and listing of its elements' do
     bin = Gst::Bin.new 'bin'
-    bin.add_many [
+    elements = [
       Gst::ElementFactory.make('fakesink', 'testsink'),
+      Gst::ElementFactory.make('queue', 'testqueue'),
       Gst::ElementFactory.make('fakesrc', 'testsrc')
     ]
-    elements = bin.iterate_elements
-    elements.map(&:get_name).must_equal ['testsrc', 'testsink']
+    bin.add_many elements
+    iterator = bin.iterate_elements
+    iterator.map(&:get_name).must_equal ['testsrc', 'testqueue', 'testsink']
+    elements.first.link_many elements[1..-1]
   end
 end
