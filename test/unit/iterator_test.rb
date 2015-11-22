@@ -11,6 +11,11 @@ describe Gst::Iterator do
 
   it 'behaves like an Enumerable' do
     iterator.must_be_kind_of Gst::Iterator
-    iterator.map(&:get_name).must_equal ['testname']
+    iterator.map(&:name).must_equal ['testname']
+  end
+
+  it 'allows re-starting the iteration' do
+    iterator.map(&:name).must_equal ['testname']
+    iterator.map(&:name).must_equal ['testname']
   end
 end
