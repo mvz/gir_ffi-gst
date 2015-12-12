@@ -18,4 +18,12 @@ describe Gst::Iterator do
     iterator.map(&:name).must_equal ['testname']
     iterator.map(&:name).must_equal ['testname']
   end
+
+  it 'allows breaking off the loop' do
+    bin.add Gst::ElementFactory.make 'fakesink', 'othername'
+    iterator.map(&:name).must_equal ['othername', 'testname']
+    result = nil
+    iterator.each { |it| result = it; break if it.name == 'othername' }
+    result.name.must_equal 'othername'
+  end
 end
