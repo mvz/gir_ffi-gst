@@ -16,7 +16,7 @@ GirFFI-based bindings for GStreamer
 
 ## License
 
-Copyright &copy; 2015, [Matijs van Zuijlen](http://www.matijs.net/)
+Copyright &copy; 2015&ndash;2016, [Matijs van Zuijlen](http://www.matijs.net/)
 
 GirFFI-Gst is free software, distributed under the terms of the GNU Lesser
 General Public License, version 2.1 or later. See the file COPYING.LIB for more
