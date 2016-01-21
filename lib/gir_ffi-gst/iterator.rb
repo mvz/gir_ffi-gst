@@ -4,9 +4,8 @@ module Gst
     include Enumerable
 
     def each
-      prc = proc { |item, _ud| yield item.get_value }
       resync
-      foreach(prc, nil)
+      foreach { |item, _ud| yield item.get_value }
     end
   end
 end
