@@ -1,6 +1,7 @@
 require 'gir_ffi'
 
 GirFFI.setup :Gst
+GirFFI.setup :GstBase
 
 require_relative 'gir_ffi-gst/base'
 require_relative 'gir_ffi-gst/bin'

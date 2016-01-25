@@ -24,3 +24,9 @@ describe Gst do
     end
   end
 end
+
+describe 'loaded namespaces' do
+  it 'includes GstBase' do
+    GstBase::BaseSink.must_be_instance_of Class
+  end
+end
