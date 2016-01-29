@@ -1,5 +1,10 @@
 # Change log
 
+## 0.0.5 / 2016-01-21
+
+* Load GstBase namespace by default
+* Depend on GirFFI 0.9.1 to ensure ability to handle all signals
+
 ## 0.0.4 / 2016-01-21
 
 * Make Gst.init to not take any arguments
