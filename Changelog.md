@@ -1,5 +1,9 @@
 # Change log
 
+## 0.0.6 / 2016-03-23
+
+* Update dependency on GirFFI to 0.10.0
+
 ## 0.0.5 / 2016-01-21
 
 * Load GstBase namespace by default
