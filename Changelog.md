@@ -1,5 +1,9 @@
 # Change log
 
+## 0.0.7 / 2016-11-05
+
+* Update dependency on GirFFI to 0.11.0
+
 ## 0.0.6 / 2016-03-23
 
 * Update dependency on GirFFI to 0.10.0
