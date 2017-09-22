@@ -10,7 +10,7 @@ describe Gst::Bin do
     ]
     bin.add_many elements
     iterator = bin.iterate_elements
-    iterator.map(&:get_name).must_equal ['testsrc', 'testqueue', 'testsink']
+    iterator.map(&:get_name).must_equal %w(testsrc testqueue testsink)
     elements.first.link_many elements[1..-1]
   end
 end

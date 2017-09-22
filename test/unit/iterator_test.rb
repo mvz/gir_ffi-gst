@@ -21,7 +21,7 @@ describe Gst::Iterator do
 
   it 'allows breaking off the loop' do
     bin.add Gst::ElementFactory.make 'fakesink', 'othername'
-    iterator.map(&:name).must_equal ['othername', 'testname']
+    iterator.map(&:name).must_equal %w(othername testname)
     result = nil
     iterator.each { |it| result = it; break if it.name == 'othername' }
     result.name.must_equal 'othername'
