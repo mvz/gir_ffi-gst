@@ -4,7 +4,7 @@ describe Gst do
   describe '::init' do
     before do
       module DummyGst
-        def self.init(arr)
+        def self.init(_arr)
           %w(baz qux zonk)
         end
 
