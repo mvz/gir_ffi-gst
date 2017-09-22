@@ -13,4 +13,3 @@ describe Gst::Bin do
     end
   end
 end
-

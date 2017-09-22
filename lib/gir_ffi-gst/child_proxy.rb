@@ -14,4 +14,3 @@ module Gst
     end
   end
 end
-
