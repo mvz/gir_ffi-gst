@@ -23,7 +23,10 @@ describe Gst::Iterator do
     bin.add Gst::ElementFactory.make 'fakesink', 'othername'
     iterator.map(&:name).must_equal %w(othername testname)
     result = nil
-    iterator.each { |it| result = it; break if it.name == 'othername' }
+    iterator.each do |it|
+      result = it
+      break if it.name == 'othername'
+    end
     result.name.must_equal 'othername'
   end
 end
