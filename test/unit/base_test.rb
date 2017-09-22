@@ -4,8 +4,8 @@ describe Gst do
   describe '::init' do
     before do
       module DummyGst
-        def self.init arr
-          ['baz', 'qux', 'zonk']
+        def self.init(_arr)
+          %w(baz qux zonk)
         end
 
         include GirFFIGst::AutoArgv
@@ -18,9 +18,9 @@ describe Gst do
     end
 
     it 'replaces ARGV with the tail of the result of the original init function' do
-      ARGV.replace ['foo', 'bar']
+      ARGV.replace %w(foo bar)
       DummyGst.init
-      assert_equal ['qux', 'zonk'], ARGV.to_a
+      assert_equal %w(qux zonk), ARGV.to_a
     end
   end
 end

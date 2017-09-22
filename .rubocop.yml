@@ -1,0 +1,33 @@
+AllCops:
+  Exclude:
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+
+Layout/MultilineMethodCallBraceLayout:
+  EnforcedStyle: same_line
+
+# Test describe blocks can be any size
+Metrics/BlockLength:
+  Exclude:
+    - 'test/**/*'
+
+# Use lenient line length
+Metrics/LineLength:
+  Max: 100
+
+# Some of GnomeKeyring's functions have long parameter lists
+Metrics/ParameterLists:
+  Max: 7
+
+# GirFFI uses a ffi-something naming scheme.
+Naming/FileName:
+  Enabled: false
+
+# Use older RuboCop default
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%w': ()
+
+# I like to have symbols always look like symbols
+Style/SymbolArray:
+  EnforcedStyle: brackets

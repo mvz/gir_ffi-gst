@@ -15,4 +15,3 @@ describe Gst::ChildProxy do
     end
   end
 end
-
