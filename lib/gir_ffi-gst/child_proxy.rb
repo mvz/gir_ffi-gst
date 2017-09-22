@@ -1,6 +1,7 @@
-module Gst
-  load_class :ChildProxy
+Gst.load_class :ChildProxy
 
+module Gst
+  # Overrides for GstChildProxy
   module ChildProxy
     setup_instance_method :get_property
 

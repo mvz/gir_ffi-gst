@@ -1,5 +1,7 @@
+Gst.load_class :Iterator
+
 module Gst
-  load_class :Iterator
+  # Overrides for GstIterator
   class Iterator
     include Enumerable
 
