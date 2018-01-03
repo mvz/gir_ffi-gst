@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Gst.load_class :Iterator
 
 module Gst

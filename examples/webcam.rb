@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #
 # Simple gstreamer player for webcam.
 # Does not much more than
