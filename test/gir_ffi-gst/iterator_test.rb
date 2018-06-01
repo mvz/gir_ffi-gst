@@ -31,4 +31,17 @@ describe Gst::Iterator do
     end
     result.name.must_equal 'othername'
   end
+
+  it 'allows redoing an iteration' do
+    bin.add Gst::ElementFactory.make 'fakesink', 'othername'
+    iterator.map(&:name).must_equal %w(othername testname)
+    count = 0
+    result = []
+    iterator.each do |it|
+      count += 1
+      result << it.name
+      redo if count == 1
+    end
+    result.must_equal %w(othername othername testname)
+  end
 end

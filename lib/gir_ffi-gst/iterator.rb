@@ -9,7 +9,13 @@ module Gst
 
     def each
       resync
-      foreach { |item, _ud| yield item.get_value }
+      continue = true
+      foreach do |item, _ud|
+        break unless continue
+        continue = false
+        yield item.get_value
+        continue = true
+      end
     end
   end
 end
