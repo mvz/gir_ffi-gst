@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.10 / 2018-09-08
+
+* Drop support for Ruby 2.1
+* Update dependency on GirFFI to 0.13.0
+
 ## 0.0.9 / 2018-06-01
 
 * Restore support for Ruby 2.1 and 2.2
@@ -35,7 +40,7 @@
 
 ## 0.0.2 / 2015-11-13
 
-* Add override for ChildProxy#get_property
+* Add override for `ChildProxy#get_property`
 
 ## 0.0.1 / 2015-11-07
 

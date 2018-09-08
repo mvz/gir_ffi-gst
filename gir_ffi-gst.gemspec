@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'gir_ffi-gst'
-  s.version = '0.0.9'
+  s.version = '0.0.10'
 
   s.summary = 'GirFFI-based bindings for GStreamer'
   s.description =
