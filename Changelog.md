@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.11 / 2018-09-27
+
+* Update dependency on GirFFI to 0.14.0
+
 ## 0.0.10 / 2018-09-08
 
 * Drop support for Ruby 2.1
