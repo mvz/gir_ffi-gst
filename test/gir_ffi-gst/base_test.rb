@@ -29,6 +29,6 @@ end
 
 describe 'loaded namespaces' do
   it 'includes GstBase' do
-    GstBase::BaseSink.must_be_instance_of Class
+    _(GstBase::BaseSink).must_be_instance_of Class
   end
 end
