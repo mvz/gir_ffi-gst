@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require_relative '../test_helper'
+require_relative "../test_helper"
 
 describe Gst::Bin do
-  it 'allows easy adding, linking and listing of its elements' do
-    bin = Gst::Bin.new 'bin'
+  it "allows easy adding, linking and listing of its elements" do
+    bin = Gst::Bin.new "bin"
     elements = [
-      Gst::ElementFactory.make('fakesink', 'testsink'),
-      Gst::ElementFactory.make('queue', 'testqueue'),
-      Gst::ElementFactory.make('fakesrc', 'testsrc')
+      Gst::ElementFactory.make("fakesink", "testsink"),
+      Gst::ElementFactory.make("queue", "testqueue"),
+      Gst::ElementFactory.make("fakesrc", "testsrc")
     ]
     bin.add_many elements
     iterator = bin.iterate_elements
