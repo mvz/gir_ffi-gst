@@ -34,6 +34,7 @@ src.link snk
 loop do
   result = pipeline.set_state :playing
   break if result != :async
+
   state = pipeline.get_state(-1)
   break if state[1] == :playing
 end
