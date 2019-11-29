@@ -1,23 +1,29 @@
-sudo: required
-dist: trusty
 language: ruby
 
+dist: xenial
+
 before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -y libgirepository1.0-dev gir1.2-gstreamer-1.0
+  - sudo apt-get update
+  # Provides libgirepository-1.0.so.1
+  - sudo apt-get install libgirepository-1.0-1
+  # Provides Gst-1.0.typelib
+  - sudo apt-get install gir1.2-gstreamer-1.0
+
+cache:
+  bundler: true
 
 rvm:
   - 2.4
   - 2.5
   - 2.6
-  - ruby-head
   - jruby-9.2
+  - ruby-head
   - jruby-head
 
 matrix:
   allow_failures:
-    - rvm: jruby-head
     - rvm: ruby-head
+    - rvm: jruby-head
 
 branches:
   only:
