@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{lib,test}/**/*.rb", "README.md", "Rakefile", "COPYING.LIB"]
   s.test_files = Dir["test/**/*.rb"]
 
-  s.add_runtime_dependency("gir_ffi", ["~> 0.15.0"])
+  s.add_runtime_dependency("gir_ffi", ["~> 0.15.2"])
   s.add_development_dependency("minitest", ["~> 5.12"])
   s.add_development_dependency("rake", ["~> 13.0"])
 
