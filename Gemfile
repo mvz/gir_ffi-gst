@@ -4,4 +4,4 @@ source "https://rubygems.org"
 
 gemspec
 
-gem "pry", "~> 0.12.0"
+gem "pry", "~> 0.13.0"
