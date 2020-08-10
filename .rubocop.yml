@@ -1,6 +1,7 @@
 require:
-  - rubocop-performance
   - rubocop-minitest
+  - rubocop-packaging
+  - rubocop-performance
 
 AllCops:
   Exclude:
