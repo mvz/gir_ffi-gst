@@ -1,0 +1,8 @@
+lib/gir_ffi-gst.rb
+lib/gir_ffi-gst/base.rb
+lib/gir_ffi-gst/bin.rb
+lib/gir_ffi-gst/child_proxy.rb
+lib/gir_ffi-gst/element.rb
+lib/gir_ffi-gst/iterator.rb
+README.md
+COPYING.LIB

@@ -18,13 +18,14 @@ Gem::Specification.new do |spec|
   spec.metadata["source_code_uri"] = "https://github.com/mvz/gir_ffi-gst"
   spec.metadata["changelog_uri"] = "https://github.com/mvz/gir_ffi-gst/blob/master/Changelog.md"
 
-  spec.files = Dir["{lib,test}/**/*.rb", "README.md", "Rakefile", "COPYING.LIB"]
+  spec.files = File.read("Manifest.txt").split
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "gir_ffi", "~> 0.15.2"
 
   spec.add_development_dependency "minitest", "~> 5.12"
   spec.add_development_dependency "rake", "~> 13.0"
+  spec.add_development_dependency "rake-manifest", "~> 0.1.0"
   spec.add_development_dependency "rubocop", "~> 0.89.0"
   spec.add_development_dependency "rubocop-minitest", "~> 0.10.1"
   spec.add_development_dependency "rubocop-packaging", "~> 0.2.0"
