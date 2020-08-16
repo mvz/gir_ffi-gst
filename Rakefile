@@ -1,9 +1,16 @@
 # frozen_string_literal: true
 
-require "rake/testtask"
 require "bundler/gem_helper"
+require "rake/manifest/task"
+require "rake/testtask"
 
 Bundler::GemHelper.install_tasks
+
+Rake::Manifest::Task.new do |t|
+  t.patterns = ["lib/**/*.rb", "README.md", "COPYING.LIB"]
+end
+
+task build: "manifest:check"
 
 namespace :test do
   Rake::TestTask.new(:unit) do |t|
