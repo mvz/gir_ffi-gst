@@ -2,18 +2,16 @@
 
 require_relative "../test_helper"
 
+module DummyGst
+  def self.init(_arr)
+    %w(baz qux zonk)
+  end
+
+  include GirFFIGst::AutoArgv
+end
+
 describe Gst do
   describe "::init" do
-    before do
-      module DummyGst
-        def self.init(_arr)
-          %w(baz qux zonk)
-        end
-
-        include GirFFIGst::AutoArgv
-      end
-    end
-
     it "does not accept any arguments" do
       assert_raises(ArgumentError) { DummyGst.init 1, ["foo"] }
       assert_raises(ArgumentError) { DummyGst.init ["foo"] }

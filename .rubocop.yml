@@ -6,8 +6,13 @@ require:
 AllCops:
   Exclude:
     - 'tmp/**/*'
+    - 'vendor/bundle/**/*'
   NewCops: enable
   TargetRubyVersion: 2.5
+
+# Make BeginEndAlignment behavior match EndAlignment
+Layout/BeginEndAlignment:
+  EnforcedStyleAlignWith: begin
 
 # Be lenient with line length
 Layout/LineLength:
@@ -38,11 +43,6 @@ Lint/AmbiguousBlockAssociation:
 # Allow if (foo = get_foo) style
 Lint/AssignmentInCondition:
   AllowSafeAssignment: true
-
-# Disabled until improved
-# See https://github.com/rubocop-hq/rubocop/pull/8480
-Lint/MissingSuper:
-  Enabled: false
 
 Metrics/BlockLength:
   Exclude:
