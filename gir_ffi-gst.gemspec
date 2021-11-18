@@ -17,6 +17,7 @@ Gem::Specification.new do |spec|
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/mvz/gir_ffi-gst"
   spec.metadata["changelog_uri"] = "https://github.com/mvz/gir_ffi-gst/blob/master/Changelog.md"
+  spec.metadata["rubygems_mfa_required"] = "true"
 
   spec.files = File.read("Manifest.txt").split
   spec.require_paths = ["lib"]
