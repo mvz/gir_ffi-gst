@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "gir_ffi-gst"
-  spec.version = "0.0.12"
+  spec.version = "0.0.13"
   spec.authors = ["Matijs van Zuijlen"]
   spec.email = ["matijs@matijs.net"]
 
