@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.14 / 2022-05-21
+
+* Update dependency on GirFFI to 0.16.0
+* Drop support for Ruby 2.6 and JRuby
+
 ## 0.0.13 / 2022-01-21
 
 * Update dependency on GirFFI to 0.15.2
