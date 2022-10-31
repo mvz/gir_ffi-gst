@@ -20,6 +20,7 @@ describe Gst do
     it "replaces ARGV with the tail of the result of the original init function" do
       ARGV.replace %w(foo bar)
       DummyGst.init
+
       assert_equal %w(qux zonk), ARGV.to_a
     end
   end
