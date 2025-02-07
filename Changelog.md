@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.0.16 / 2025-02-07
+
+* Support Ruby 3.1 through 3.4, dropping support for Ruby 3.0 ([#106] by [mvz])
+* Update GirFFI dependency to version 0.18.0 ([#107] by [mvz])
+
+[#106]: https://github.com/mvz/gir_ffi-gst/pull/106
+[#107]: https://github.com/mvz/gir_ffi-gst/pull/107
+
 ## 0.0.15 / 2023-12-31
 
 * Support Ruby 3.0 and up, dropping support for Ruby 2.7 ([#100] by [mvz])
