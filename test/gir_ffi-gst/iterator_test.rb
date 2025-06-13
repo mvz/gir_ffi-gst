@@ -23,17 +23,20 @@ describe Gst::Iterator do
 
   it "allows breaking off the loop" do
     bin.add Gst::ElementFactory.make "fakesink", "othername"
+
     _(iterator.map(&:name)).must_equal %w(othername testname)
     result = nil
     iterator.each do |it|
       result = it
       break if it.name == "othername"
     end
+
     _(result.name).must_equal "othername"
   end
 
   it "allows redoing an iteration" do
     bin.add Gst::ElementFactory.make "fakesink", "othername"
+
     _(iterator.map(&:name)).must_equal %w(othername testname)
     count = 0
     result = []
@@ -42,6 +45,7 @@ describe Gst::Iterator do
       result << it.name
       redo if count == 1
     end
+
     _(result).must_equal %w(othername othername testname)
   end
 end

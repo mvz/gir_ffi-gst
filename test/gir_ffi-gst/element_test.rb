@@ -10,12 +10,14 @@ describe Gst::Element do
   describe "#link_many" do
     it "links multiple elements" do
       fakesrc.link_many [queue, fakesink]
+
       _(fakesrc.iterate_src_pads.first.peer.parent).must_equal queue
       _(queue.iterate_src_pads.first.peer.parent).must_equal fakesink
     end
 
     it "returns success if linking succeeds" do
       result = fakesrc.link_many [queue, fakesink]
+
       _(result).must_equal true
     end
 
@@ -24,11 +26,13 @@ describe Gst::Element do
       othersource.link queue
 
       result = fakesrc.link_many [queue, fakesink]
+
       _(result).must_equal false
     end
 
     it "returns true when linking 0 elements" do
       result = fakesrc.link_many []
+
       _(result).must_equal true
     end
   end

@@ -10,6 +10,7 @@ describe Gst::Bin do
   describe "#add_many" do
     it "adds multiple elements" do
       bin.add_many [fakesink, fakesrc]
+
       _(fakesink.parent).must_equal bin
       _(fakesrc.parent).must_equal bin
     end
