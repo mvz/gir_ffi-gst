@@ -26,9 +26,9 @@ describe Gst::Iterator do
 
     _(iterator.map(&:name)).must_equal %w(othername testname)
     result = nil
-    iterator.each do |it|
-      result = it
-      break if it.name == "othername"
+    iterator.each do |element|
+      result = element
+      break if element.name == "othername"
     end
 
     _(result.name).must_equal "othername"
@@ -40,9 +40,9 @@ describe Gst::Iterator do
     _(iterator.map(&:name)).must_equal %w(othername testname)
     count = 0
     result = []
-    iterator.each do |it|
+    iterator.each do |element|
       count += 1
-      result << it.name
+      result << element.name
       redo if count == 1
     end
 
