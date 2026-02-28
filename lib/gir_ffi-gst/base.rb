@@ -21,10 +21,3 @@ module GirFFIGst
     end
   end
 end
-
-# Overrides for Gst module functions
-module Gst
-  setup_method! "init"
-
-  include GirFFIGst::AutoArgv
-end
