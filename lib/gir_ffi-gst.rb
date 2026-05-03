@@ -2,6 +2,7 @@
 
 require "gir_ffi"
 
+require "gir_ffi-gst/version"
 require "gir_ffi-gst/gst"
 
 Gst.init

@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
+require_relative "lib/gir_ffi-gst/version"
+
 Gem::Specification.new do |spec|
   spec.name = "gir_ffi-gst"
-  spec.version = "0.0.16"
+  spec.version = GirFFIGst::VERSION
   spec.authors = ["Matijs van Zuijlen"]
   spec.email = ["matijs@matijs.net"]
 

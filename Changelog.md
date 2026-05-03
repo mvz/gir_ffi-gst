@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0 / 2025-05-03
+
+* Support Ruby 3.2 through 4.0, dropping support for Ruby 3.1
+  ([#113] and [#119] by [mvz])
+* Update `gir_ffi` dependency to version 0.19.0 ([#122] by [mvz])
+* Automatically run `Gst.init` when `gir_ffi-gst` is required ([#122] by [mvz])
+
+[mvz]: https://github.com/mvz
+
+[#113]: https://github.com/mvz/gir_ffi-gst/pull/113
+[#119]: https://github.com/mvz/gir_ffi-gst/pull/119
+[#122]: https://github.com/mvz/gir_ffi-gst/pull/122
+
 ## 0.0.16 / 2025-02-07
 
 * Support Ruby 3.1 through 3.4, dropping support for Ruby 3.0 ([#106] by [mvz])
@@ -68,7 +81,7 @@
 
 ## 0.0.4 / 2016-01-21
 
-* Make Gst.init to not take any arguments
+* Make Gst.init not take any arguments
 * Depend on GirFFI 0.9.0
 * Update overrides to work with GirFFI 0.9.0
 
