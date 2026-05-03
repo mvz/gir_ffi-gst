@@ -5,7 +5,9 @@ source "https://rubygems.org"
 gemspec
 
 group :development do
+  gem "irb", "~> 1.18"
   gem "minitest", "~> 6.0"
+  gem "minitest-focus", "~> 1.4"
   gem "rake", "~> 13.0"
   gem "rake-manifest", "~> 0.2.0"
   gem "rubocop", "~> 1.85"
