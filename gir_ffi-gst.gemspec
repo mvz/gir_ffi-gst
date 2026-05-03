@@ -22,5 +22,5 @@ Gem::Specification.new do |spec|
   spec.files = File.read("Manifest.txt").split
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "gir_ffi", "~> 0.18.0"
+  spec.add_dependency "gir_ffi", "~> 0.19.0"
 end
